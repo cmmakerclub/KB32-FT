@@ -7,7 +7,7 @@ module.exports = {
   author: "Maker Asia",
   website: "http://www.kidbright.club",
   email: "info@makerasia.com",
-  git: "https://github.com/woodif/kb32-ft/",
+  git: "hhttps://github.com/cmmakerclub/kb32-ft/",
   image: "/static/display.png",
-  version: "1.1.0",
+  version: "1.2.0",
 };
