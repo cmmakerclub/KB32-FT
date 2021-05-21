@@ -10,4 +10,5 @@ module.exports = {
   git: "hhttps://github.com/cmmakerclub/kb32-ft/",
   image: "/static/display.png",
   version: "1.2.0",
+  recommended: "ilovekbide",
 };
