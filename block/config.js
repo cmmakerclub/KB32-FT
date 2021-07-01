@@ -358,14 +358,16 @@ module.exports = {
         {
           xml: `<sep gap="32"></sep><label text="Setup Drone" web-class="headline"></label>`
         },
+        "remotemabegin",
         "remotexybegin",
-        "dronecal",
         "dronebegin",
+        "dronecal",
         {
           xml: `<sep gap="32"></sep><label text="Run Drone" web-class="headline"></label>`
         },
+        "remotemarun",
         "remotexyrun",
-        "dronerun",
+        //"dronerun",
         {
           xml: `<sep gap="32"></sep><label text="Batterry" web-class="headline"></label>`
         },

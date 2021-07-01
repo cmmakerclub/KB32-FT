@@ -1,3 +1,4 @@
+const dirIcon = Vue.prototype.$global.board.board_info.dir;
 module.exports = function (Blockly) {
   "use strict";
 
@@ -43,6 +44,46 @@ module.exports = function (Blockly) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour(30);
+      this.setTooltip("");
+      this.setHelpUrl("");
+    }
+  };
+
+  Blockly.Blocks["remotemabegin"] = {
+    init: function () {
+
+      this.appendDummyInput()
+        .appendField(new Blockly.FieldImage(`file:///${dirIcon}/static/icons/app_logo.png`, 24, 24, "*"))
+        .appendField("Remote MakerAsia");
+      this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_LEFT)
+        .appendField("Wifi : AP Mode")
+      this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_LEFT)
+        .appendField("USERNAME : KB32FT-(MAC Address)")
+      this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_LEFT)
+        .appendField("PASSWORD : KB32FT-(MAC Address)")
+      this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_LEFT)
+        .appendField("PORT : 12345")
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(350);
+      this.setTooltip("");
+      this.setHelpUrl("");
+    }
+  };
+
+  Blockly.Blocks['remotemarun'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField("Remote MakerAsia : Running")
+      //.appendField(new Blockly.FieldTextInput("0x42"), "ADDS");
+      this.setInputsInline(true);
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(350);
       this.setTooltip("");
       this.setHelpUrl("");
     }
