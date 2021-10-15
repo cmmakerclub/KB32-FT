@@ -350,6 +350,22 @@ module.exports = {
       ]
     },
 
+        {
+      name: "Remote XY",
+      color: "58",
+      icon: `file:///${dirIcon}/static/icons/REMOTE.png`,
+      blocks: [
+        {
+          xml: `<sep gap="32"></sep><label text="Setup Remote" web-class="headline"></label>`
+        },
+        "remote_xy_begin",
+        {
+          xml: `<sep gap="32"></sep><label text="Read Data" web-class="headline"></label>`
+        },
+        "remote_xy_get",
+      ]
+    },
+
     {
       name: "Drone Kit",
       color: "58",
