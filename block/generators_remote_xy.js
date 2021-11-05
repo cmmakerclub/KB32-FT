@@ -72,6 +72,9 @@ module.exports = function (Blockly) {
         case 5:
           tmp = RemoteXY.switch_1;
           break;
+        case 6:
+          tmp = RemoteXY.connect_flag;
+          break;
       }
 
       return tmp;

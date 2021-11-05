@@ -47,7 +47,7 @@ module.exports = function (Blockly) {
 					["Joy2_x", "3"],
 					["Joy2_y", "4"],
 					["Switch", "5"],
-
+					["WiFi", "6"],
 				]), 'OUTPUT')
 				.appendField("");
 
