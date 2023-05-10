@@ -9,6 +9,6 @@ module.exports = {
   email: "info@makerasia.com",
   git: "https://github.com/cmmakerclub/kb32-ft/",
   image: "/static/display.png",
-  version: "1.2.3",
+  version: "1.2.4",
   recommended: "ilovekbide",
 };
