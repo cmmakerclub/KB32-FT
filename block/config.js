@@ -350,7 +350,7 @@ module.exports = {
       ]
     },
 
-        {
+    {
       name: "Remote XY",
       color: "58",
       icon: `file:///${dirIcon}/static/icons/REMOTE.png`,
@@ -449,7 +449,63 @@ module.exports = {
         "esp32_servo_write",
         "esp32_servo_write_micros",
         "esp32_servo_read",
-        "esp32_servo_read_micros"
+        "esp32_servo_read_micros",
+        {
+          xml: `<sep gap="32"></sep><label text="Gripper" web-class="headline"></label>`
+        },
+        
+        "esp32_servo_gripper_setup",
+
+        {
+          xml:
+            `<block type="esp32_servo_gripper_up">
+    <value name="SPEED">
+        <shadow type="math_number">
+            <field name="NUM">50</field>
+        </shadow>
+    </value>
+</block>`
+        },
+
+        {
+          xml:
+            `<block type="esp32_servo_gripper_down">
+  <value name="SPEED">
+      <shadow type="math_number">
+          <field name="NUM">50</field>
+      </shadow>
+  </value>
+</block>`
+        },
+
+        {
+          xml:
+            `<block type="esp32_servo_gripper_release">
+<value name="SPEED">
+    <shadow type="math_number">
+        <field name="NUM">50</field>
+    </shadow>
+</value>
+</block>`
+        },
+
+        {
+          xml:
+            `<block type="esp32_servo_gripper_arrest">
+<value name="degree">
+    <shadow type="math_number">
+        <field name="NUM">0</field>
+    </shadow>
+</value>
+<value name="SPEED">
+    <shadow type="math_number">
+        <field name="NUM">50</field>
+    </shadow>
+</value>
+</block>`
+        },
+
+
       ]
     },
     // {
