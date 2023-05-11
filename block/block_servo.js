@@ -124,7 +124,7 @@ module.exports = function (Blockly) {
       this.appendValueInput("degree")
         .setCheck("Number")
       this.appendDummyInput()
-        .appendField("degree [ 0-90 ]")
+        .appendField("degree [ 0-70 ]")
       this.appendDummyInput()
         .appendField(": Speed");
       this.appendValueInput("SPEED")

@@ -54,6 +54,12 @@ ${variable_instance}.attach(${text_pin});
 #VARIABLE 
 Servo gripper1;
 Servo gripper2;
+int i;
+int degree;
+int speedarrest;
+int speedrelease;
+int speedup;
+int speeddown;
 #END
 
 gripper1.attach(15);
@@ -88,14 +94,11 @@ gripper2.write(0);
     var number_speed = Blockly.JavaScript.valueToCode(block, 'SPEED', Blockly.JavaScript.ORDER_ATOMIC);
     // TODO: Assemble JavaScript into code variable.
     var code = `
-#VARIABLE 
-int i;
-#END
-int degree =${value_degree};
+degree =${value_degree};
 if (degree > 70) {
   degree = 70;
 }
-    int speedarrest = map(${number_speed}, 0, 100, 30, 0);
+    speedarrest = map(${number_speed}, 0, 100, 30, 0);
         for (i = 0; i <= degree; i++) {
           gripper1.write(i);
           delay(speedarrest);
@@ -107,10 +110,7 @@ if (degree > 70) {
     var number_speed = Blockly.JavaScript.valueToCode(block, 'SPEED', Blockly.JavaScript.ORDER_ATOMIC);
     // TODO: Assemble JavaScript into code variable.
     var code = `
-#VARIABLE 
-int i;
-#END
-int speedrelease = map(${number_speed}, 0, 100, 30, 0);
+speedrelease = map(${number_speed}, 0, 100, 30, 0);
 for (i = 90; i >= 0; i--) {
       gripper1.write(i);
       delay(speedrelease);
@@ -122,10 +122,7 @@ for (i = 90; i >= 0; i--) {
     var number_speed = Blockly.JavaScript.valueToCode(block, 'SPEED', Blockly.JavaScript.ORDER_ATOMIC);
     // TODO: Assemble JavaScript into code variable.
     var code = `
-#VARIABLE 
-int i;
-#END
-int speedup = map(${number_speed}, 0, 100, 30, 0);
+speedup = map(${number_speed}, 0, 100, 30, 0);
     for (i = 0; i <= 90; i++) {
       gripper2.write(i);
       delay(speedup);
@@ -137,10 +134,7 @@ int speedup = map(${number_speed}, 0, 100, 30, 0);
     var number_speed = Blockly.JavaScript.valueToCode(block, 'SPEED', Blockly.JavaScript.ORDER_ATOMIC);
     // TODO: Assemble JavaScript into code variable.
     var code = `
-#VARIABLE 
-int i;
-#END
-int speeddown = map(${number_speed}, 0, 100, 30, 0);
+speeddown = map(${number_speed}, 0, 100, 30, 0);
 for (i = 90; i >= 0; i--) {
       gripper2.write(i);
       delay(speeddown);
